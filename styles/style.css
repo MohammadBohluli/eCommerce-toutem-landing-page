@@ -5,6 +5,12 @@
   --color-white: #fff;
   --color-grey: #f9fafb;
 
+  /* font-size ****/
+  --body-small: 1.2rem;
+  --body-medium: 1.4rem;
+  --body-large: 1.6rem;
+  --body-xlarge: 1.8rem;
+
   /* break points ****/
   --bp-mobile: 375px;
   --bp-tablet: 834px;
@@ -24,10 +30,41 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: var(--body-small);
+  font-weight: normal;
+}
+
 a {
   text-decoration: none;
 }
 
 li {
   list-style: none;
+}
+
+/* Typography **********************************************************/
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
 }
