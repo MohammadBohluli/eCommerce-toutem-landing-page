@@ -1,0 +1,33 @@
+/* Variables **********************************************************/
+:root {
+  /* colors ****/
+  --color-primary: #5fd788;
+  --color-white: #fff;
+  --color-grey: #f9fafb;
+
+  /* break points ****/
+  --bp-mobile: 375px;
+  --bp-tablet: 834px;
+  --bp-desktop: 1440px;
+}
+
+/* CSS Reset **********************************************************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
