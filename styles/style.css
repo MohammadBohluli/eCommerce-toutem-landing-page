@@ -15,6 +15,14 @@
   --bp-mobile: 375px;
   --bp-tablet: 834px;
   --bp-desktop: 1440px;
+
+  /* hamburger menu */
+  --bur-line-width: 35px;
+  --bur-line-height: 5px;
+  --bur-line-gap: 5px;
+  --hamburger-height: calc(
+    var(--bur-line-height) * 3 + var(--bur-line-gap) * 2
+  );
 }
 
 /* CSS Reset **********************************************************/
@@ -74,4 +82,51 @@ h6 {
   font-size: 1.6rem;
 }
 
-/* Navbar **********************************************************/
+/* Hamburger Menu ***************************************************/
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+  display: inline-flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: var(--bur-line-gap);
+  width: max-content;
+  cursor: pointer;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bur-line-width);
+  height: var(--bur-line-height);
+  background-color: black;
+  border-radius: 20px;
+  transform-origin: left center;
+  transition: opacity 0.7s, width 0.7s, rotate 0.7s;
+}
+
+.hamburger-menu input {
+  appearance: none;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bur-line-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bur-line-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+/* Navbar ************************************************************/
