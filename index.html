@@ -3,31 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+    <!-- <link
       href="https://fonts.cdnfonts.com/css/sf-pro-display"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="/styles/style.css" />
     <title>Toutem</title>
   </head>
   <body>
     <!-- start navbar ----------------------------------------------------------->
-    <nav class="nav">
-      <ul class="nav__list" style="display: none">
-        <li class="nav__item"><a href="#">home</a></li>
-        <li class="nav__item"><a href="#">about us</a></li>
-        <li class="nav__item"><a href="#">shop</a></li>
-        <li class="nav__item"><a href="#">contact</a></li>
-      </ul>
+    <nav class="nav container">
+      <!-- logo ------>
       <span class="logo">
         <svg class="icon">
           <use xlink:href="assets/img/icons.svg#logo"></use>
         </svg>
         <span class="logo__text">Toutem</span>
       </span>
+      <!-- hamburger menu ------>
       <label class="hamburger-menu">
-        <input type="checkbox" />
+        <input type="checkbox" class="btn collapsible" />
       </label>
+      <!-- search input -->
+      <div class="search-box hidden">
+        <input type="search" />
+        <button class="btn-search">
+          <svg class="icon">
+            <use xlink:href="assets/img/icons.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- navbar ------>
+      <ul class="nav__list hidden">
+        <li class="nav__item"><a href="#">home</a></li>
+        <li class="nav__item"><a href="#">about us</a></li>
+        <li class="nav__item"><a href="#">shop</a></li>
+        <li class="nav__item"><a href="#">contact</a></li>
+      </ul>
     </nav>
     <!-- end navbar ------------------------------------------------------------->
 
