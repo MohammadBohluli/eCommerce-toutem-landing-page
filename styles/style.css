@@ -7,8 +7,8 @@
   --color-grey-scale-100: #f3f4f6;
 
   /* font-size ****/
-  --body-small: 2rem;
-  --body-medium: 1.4rem;
+  --body-small: 1.5rem;
+  --body-medium: 2rem;
   --body-large: 1.6rem;
   --body-xlarge: 1.8rem;
 
@@ -41,7 +41,7 @@ html {
 
 body {
   font-family: "SF Pro Display", sans-serif;
-  font-size: var(--body-small);
+  font-size: var(--body-medium);
   font-weight: normal;
 }
 
@@ -78,6 +78,13 @@ li {
   height: 0;
   opacity: 0;
   transition: all 0.3s;
+}
+
+@media screen and (min-width: 835px) {
+  .hidden {
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 .show-content {
@@ -119,11 +126,11 @@ h6 {
   width: max-content;
   cursor: pointer;
 }
-/* @media screen and (min-width: 835px) {
+@media screen and (min-width: 835px) {
   .hamburger-menu {
     display: none;
   }
-} */
+}
 .hamburger-menu::before,
 .hamburger-menu::after,
 .hamburger-menu input {
@@ -171,6 +178,17 @@ h6 {
 .nav__list {
   width: 100%;
   text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 835px) {
+  .nav__list {
+    width: auto;
+    display: flex;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .nav__item {
@@ -181,11 +199,17 @@ h6 {
   color: var(--color-primary);
   border-bottom: 1px solid var(--color-primary);
 }
+
 .nav__item a {
-  font-size: var(--body-small);
+  font-size: var(--body-medium);
   color: var(--color-grey-scale-800);
 }
 
+@media screen and (min-width: 835px) {
+  .nav__item a {
+    font-size: var(--body-small);
+  }
+}
 /* Logo ************************************************************/
 .logo {
   display: flex;
@@ -195,10 +219,11 @@ h6 {
 
 .logo__text {
   color: var(--color-grey-scale-800);
-  font-size: var(--body-small);
+  font-size: var(--body-medium);
   font-weight: 600;
   padding: 0.4rem 1rem;
 }
+
 .logo .icon {
   fill: var(--color-primary);
   width: 34px;
@@ -211,6 +236,16 @@ h6 {
   display: flex;
   justify-content: center;
   margin: 2rem 0;
+}
+
+@media screen and (min-width: 835px) {
+  .search-wrapper {
+    width: auto;
+    order: 1;
+    margin: 0;
+    justify-content: flex-end;
+    flex: 1;
+  }
 }
 
 .search-box {
