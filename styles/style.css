@@ -206,48 +206,52 @@ h6 {
 }
 
 /* Search ************************************************************/
-.search-box {
+.next-line {
   width: 100%;
   display: flex;
-  border-radius: 40px;
-  background-color: var(--color-grey-scale-100);
-  margin: 2rem 0;
+  justify-content: center;
 }
 
-.search-box input[type="search"] {
-  background-color: var(--color-grey-scale-100);
+.search-box {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.search-box.active {
+  width: 100%;
+}
+.search-box .input-search {
+  height: 100%;
+  width: 100%;
+  border: none;
   outline: none;
-  width: 0;
-  border: 1px solid var(--color-grey-scale-100);
-  border-radius: 40px;
-  padding-left: 2rem;
+  border-radius: 50px;
+  padding: 0 1rem 0 3rem;
+  background-color: var(--color-grey-scale-100);
   font-family: inherit;
-  font-size: var(--body-small);
-  flex: 1;
 }
 
-.btn-search {
-  height: 55px;
-  width: 55px;
+.search-box .search-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
   background-color: var(--color-grey-scale-100);
   border: none;
-  border-radius: 100%;
+  border-radius: 50px;
   cursor: pointer;
-  outline: none;
 }
 
-.btn-search .icon {
-  height: 32px;
-  width: 32px;
-  vertical-align: middle;
+.search-box .input-btn.active {
+  height: 50px;
+  width: 50px;
+  right: 12px;
 }
-
-.btn-search .icon:hover {
-  fill: var(--color-primary);
+.search-btn .icon {
+  height: 30px;
+  width: 30px;
 }
-
-/* @media screen and (min-width: 835px) {
-  body {
-    background-color: red;
-  }
-} */
