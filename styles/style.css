@@ -206,10 +206,11 @@ h6 {
 }
 
 /* Search ************************************************************/
-.next-line {
+.search-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 .search-box {
@@ -231,6 +232,7 @@ h6 {
   padding: 0 1rem 0 3rem;
   background-color: var(--color-grey-scale-100);
   font-family: inherit;
+  font-size: var(--body-small);
 }
 
 .search-box .search-btn {
