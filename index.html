@@ -12,37 +12,39 @@
   </head>
   <body>
     <!-- start navbar ----------------------------------------------------------->
-    <nav class="nav container">
-      <!-- logo ------>
-      <span class="logo">
-        <svg class="icon">
-          <use xlink:href="assets/img/icons.svg#logo"></use>
-        </svg>
-        <span class="logo__text">Toutem</span>
-      </span>
-      <!-- hamburger menu ------>
-      <label class="hamburger-menu">
-        <input type="checkbox" class="btn collapsible" />
-      </label>
-      <!-- search input -->
-      <div class="search-wrapper">
-        <div class="search-box hidden">
-          <input type="search" placeholder="Search" class="input-search" />
-          <button class="search-btn">
-            <svg class="icon">
-              <use xlink:href="assets/img/icons.svg#search"></use>
-            </svg>
-          </button>
+    <section class="nav-section">
+      <nav class="nav container">
+        <!-- logo ------>
+        <span class="logo">
+          <svg class="icon">
+            <use xlink:href="assets/img/icons.svg#logo"></use>
+          </svg>
+          <span class="logo__text">Toutem</span>
+        </span>
+        <!-- hamburger menu ------>
+        <label class="hamburger-menu">
+          <input type="checkbox" class="btn collapsible" />
+        </label>
+        <!-- search input -->
+        <div class="search-wrapper hidden">
+          <div class="search-box">
+            <input type="search" placeholder="Search" class="input-search" />
+            <button class="search-btn">
+              <svg class="icon">
+                <use xlink:href="assets/img/icons.svg#search"></use>
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-      <!-- navbar ------>
-      <ul class="nav__list hidden">
-        <li class="nav__item"><a href="#">home</a></li>
-        <li class="nav__item"><a href="#">about us</a></li>
-        <li class="nav__item"><a href="#">shop</a></li>
-        <li class="nav__item"><a href="#">contact</a></li>
-      </ul>
-    </nav>
+        <!-- navbar ------>
+        <ul class="nav__list hidden">
+          <li class="nav__item"><a href="#">home</a></li>
+          <li class="nav__item"><a href="#">about us</a></li>
+          <li class="nav__item"><a href="#">shop</a></li>
+          <li class="nav__item"><a href="#">contact</a></li>
+        </ul>
+      </nav>
+    </section>
     <!-- end navbar ------------------------------------------------------------->
 
     <script src="js/script.js"></script>

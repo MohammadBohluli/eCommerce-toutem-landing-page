@@ -63,20 +63,10 @@ li {
   margin: 0 auto;
 }
 
-.collapsible__content {
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.3s;
-}
-.collapsible--expanded .collapsible__content {
-  height: 100%;
-  opacity: 1;
-}
-
 .hidden {
   height: 0;
   opacity: 0;
+  overflow: hidden;
   transition: all 0.3s;
 }
 
@@ -167,12 +157,23 @@ h6 {
 }
 
 /* Navbar ************************************************************/
+.nav-section {
+  position: relative;
+  padding-bottom: 11rem;
+}
+
 .nav {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1.5rem;
+  background-color: var(--color-white);
+  min-height: 7rem;
+
+  position: absolute;
+  right: 0;
+  left: 0;
 }
 
 .nav__list {
