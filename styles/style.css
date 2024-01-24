@@ -4,6 +4,7 @@
   --color-primary: #5fd788;
   --color-white: #fff;
   --color-grey-scale-800: #1f2937;
+  --color-grey-scale-400: #9ca3af;
   --color-grey-scale-100: #f3f4f6;
 
   /* font-size ****/
@@ -40,9 +41,11 @@ html {
 }
 
 body {
-  font-family: "SF Pro Display", sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: var(--body-medium);
   font-weight: normal;
+  overflow-x: hidden;
+  height: 10000px;
 }
 
 a {
@@ -81,6 +84,17 @@ li {
   height: 100%;
   opacity: 1;
 }
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 415px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Typography **********************************************************/
 h1 {
   font-size: 4rem;
@@ -172,6 +186,7 @@ h6 {
   min-height: 7rem;
 
   position: absolute;
+  z-index: 20;
   right: 0;
   left: 0;
 }
@@ -292,4 +307,89 @@ h6 {
 .search-btn .icon {
   height: 30px;
   width: 30px;
+}
+
+/* Header ************************************************************/
+.header {
+  padding: 0 1rem;
+}
+
+.header .grid {
+  gap: 30px;
+}
+
+.header__img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header__img {
+  position: absolute;
+  top: 40px;
+  right: 120px;
+}
+
+.header__img,
+.header__bg-img {
+  max-width: 100%;
+}
+
+.header__content {
+  text-align: center;
+}
+
+.header__content h1 {
+  color: var(--color-primary);
+  font-weight: 600;
+
+  margin: 2rem 0;
+}
+
+.header__content p {
+  color: var(--color-grey-scale-400);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 415px) {
+  .header__img-box {
+    justify-content: flex-end;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .header__content {
+    order: -1;
+    text-align: left;
+    padding: 1rem 3rem;
+  }
+
+  .header__content h1 {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 835px) {
+  .header__img {
+    top: 250px;
+    right: -10px;
+  }
+
+  .header__content h1 {
+    font-size: 4rem;
+  }
+
+  .header__content p {
+    font-size: var(--body-medium);
+  }
+}
+
+@media screen and (min-width: 835px) {
+  .header__img {
+    right: -10px;
+    top: 100px;
+  }
 }

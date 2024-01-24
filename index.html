@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.cdnfonts.com/css/sf-pro-display"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&family=Inter:wght@400;700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="/styles/style.css" />
     <title>Toutem</title>
   </head>
@@ -47,6 +50,54 @@
     </section>
     <!-- end navbar ------------------------------------------------------------->
 
+    <!-- start header ----------------------------------------------------------------->
+    <section class="header-section container">
+      <header class="header grid grid--1x2">
+        <div class="header__img-box">
+          <!-- background -->
+          <picture>
+            <source
+              media="(min-width: 415px) and (max-width: 835px)"
+              srcset="assets/img/ellipse-tablet.svg"
+            />
+            <source
+              media="(min-width: 835px)"
+              srcset="assets/img/ellipse-desktop.svg"
+            />
+            <img
+              src="assets/img/ellipse-mobile.svg"
+              alt=""
+              class="header__bg-img"
+            />
+          </picture>
+          <!-- image -->
+          <picture>
+            <source
+              media="(min-width: 415px) and (max-width: 835px)"
+              srcset="assets/img/medicine-tablet.png"
+            />
+            <source
+              media="(min-width: 835px)"
+              srcset="assets/img/medicine-desktop.png"
+            />
+            <img
+              class="header__img"
+              src="assets/img/medicine-mobile.png"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div class="header__content">
+          <h1>Pear kiwi & Mint</h1>
+          <p>
+            They say that home is where the heart is. Perhaps that’s why a
+            feeling of loss is so apparent when you are far from the ones you
+            love.
+          </p>
+        </div>
+      </header>
+    </section>
+    <!-- end header ------------------------------------------------------------------->
     <script src="js/script.js"></script>
   </body>
 </html>
